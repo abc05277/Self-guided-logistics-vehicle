@@ -1,0 +1,18 @@
+#include "new_thread0.h"
+#include <debug.h>
+#include "User_show.h"
+		//vTaskDelay(GPT_Delay_ms);
+                /* New Thread entry function */
+                /* pvParameters contains TaskHandle_t */
+                void new_thread0_entry(void * pvParameters)
+                {
+                    FSP_PARAMETER_NOT_USED(pvParameters);
+										debug_init();
+
+										show_init();
+                    /* TODO: add your own code here */
+                    while(1)
+                    {										
+											show_all();
+                    }
+                }

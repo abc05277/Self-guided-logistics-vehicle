@@ -1,0 +1,17 @@
+-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c
+-fno-rtti -funsigned-char
+-gdwarf-4 -fno-function-sections -I ./my_drvise -I ./Debug -I ./user @./via/rasc_armclang.via
+-I./RTE/_Target_1
+-I./ra/arm/CMSIS_6/CMSIS/Core/Include
+-I./ra/aws/FreeRTOS/FreeRTOS/Source/include
+-I./ra/fsp/inc
+-I./ra/fsp/inc/api
+-I./ra/fsp/inc/instances
+-I./ra/fsp/src/rm_freertos_port
+-I./ra_cfg/aws
+-I./ra_cfg/fsp_cfg
+-I./ra_cfg/fsp_cfg/bsp
+-I./ra_gen
+-ID:/Users/abc/Desktop/work/keil/RUISA/RTOS_debug
+-D__UVISION_VERSION="543" -D_RTE_
+-o ./objects/uwb.o -MMD "my_drvise/UWB.c"
